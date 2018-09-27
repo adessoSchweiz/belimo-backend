@@ -47,7 +47,7 @@ podTemplate(label: 'mypod', containers: [
             container('kubectl') {
                 sh "kubectl apply -f kubeconfig.yml"
             }
-            waitUntilReady('app=belimo-frontend', 'belimo-frontend')
+            waitUntilReady('app=belimo-backend', 'belimo-backend')
         }
 
         stage('system tests') {
