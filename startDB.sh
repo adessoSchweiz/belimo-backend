@@ -5,7 +5,7 @@ docker rm mysql
 
 docker run -d \
   --name mysql \
-  -p 3306:3306 \
+  --net belimo \
   -e MYSQL_ROOT_PASSWORD=my-secret-pw \
   -e MYSQL_DATABASE=josef \
   mysql:5
